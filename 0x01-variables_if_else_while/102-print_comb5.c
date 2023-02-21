@@ -12,25 +12,20 @@ int main(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-				putchar(i + '0');
-				putchar(j + '0');
-				if(n < 1)
-				{
-						n++;
-				}
-				else
-				{
-					n = 0;
-					if (i+j < 18)
-						{
-							putchar(',');
-						}
-				}
-				putchar(' ');
+			putchar(i + '0');
+			putchar(j + '0');
+			if(n < 1)
+				n++;
+			else
+			{
+			n = 0;
+			if (i+j < 18)
+				putchar (',');
+			}
+			putchar (' ');
 		}
 	}
 
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
-

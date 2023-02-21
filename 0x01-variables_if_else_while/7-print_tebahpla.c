@@ -1,23 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Entery point
- * 
- * Return: always 0
+ * main - Entry point
+ * Return: Always 0
  */
-
 int main(void)
 {
-	int n;
+	char letter = 'z';
 
-	
-        n = 122;
-        while(n > 96)
-        {
-               putchar(n--);
-        }
-        putchar('\n');
+	while (letter >= 'a')
+	{
+	putchar(letter);
+	letter--;
+	}
+	putchar('\n');
 	return (0);
-}   
+}

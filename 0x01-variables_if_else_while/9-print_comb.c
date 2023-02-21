@@ -12,16 +12,16 @@ int main(void)
         int n;
 
         n = 48;
-        while(n < 58)
+        while (n < 58)
         {
-        putchar(n++);
+        putchar (n++);
         if(n != 58)
         {
-                putchar(',');
-                putchar(' ');
+        putchar(',');
+        putchar(' ');
         }
-}
+        }
 
-        putchar('\n');
+        putchar ('\n');
 	return (0);
 }

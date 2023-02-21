@@ -1,32 +1,23 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
- * main - Entery point
- * 
- * Return: always 0
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int n;
+	char letter = 'a';
 
-        n = 97;
-        while (n < 123)
-        { 
-               putchar (n++);
-               if (n == 101)
-               {
-                        n++;
-                        continue;
-               }
-               else if (n == 113)
-               {
-                        n++;
-                        continue;
-               }
-        }
-        putchar ('\n');
+	while (letter <= 'z')
+	{
+	if (letter != 'e' && letter != 'q')
+	{
+	putchar(letter);
+	}
+	letter++;
+	}
+
+	putchar('\n');
 	return (0);
 }

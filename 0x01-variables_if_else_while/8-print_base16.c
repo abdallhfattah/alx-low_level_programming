@@ -13,14 +13,14 @@ int main(void)
         int n;
 
         n = 48;
-        while(n)
+        while (n)
         {
-        putchar(n++);
-        if(n == 58)
+        putchar (n++);
+        if (n == 58)
                 n = 97;
-        if(n == 103)
+        if (n == 103)
                 break;
         }
-        putchar('\n');
+        putchar ('\n');
         return (0);
 }
