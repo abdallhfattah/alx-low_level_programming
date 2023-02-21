@@ -6,7 +6,6 @@
 /* betty style doc for function main goes there */
 /**
  * main - Entery point
- * 
  * Return: always 0
  */
 
@@ -18,13 +17,12 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
         /* your code goes there */
         n = 48;
-        while(n < 58){ 
-                putchar(n++);
-                if(n != 58)
-                        putchar(',');
-                if(n != 58)        
-                        putchar(' ');
-        
+        while(n < 58){
+        putchar(n++);
+        if(n != 58){
+                putchar(',');
+                putchar(' ');
+        }
         }
         putchar('\n');
 	return (0);
