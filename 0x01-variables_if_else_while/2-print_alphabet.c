@@ -1,22 +1,19 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
- * main - Entery point
- * 
- * Return: always 0
+ * main - Entry point
+ * Description: prints the alphabet in lowercase\n
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int n;
+	char letter = 'a';
 
-        n = 97;
-        while(n < 123)
-        {
-               putchar(n++);
-        }
-        putchar('\n');
+	while (letter <= 'z')
+	{
+		putchar(letter);
+		letter++;
+	}
+	putchar('\n');
 	return (0);
+
 }
