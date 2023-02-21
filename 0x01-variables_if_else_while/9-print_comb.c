@@ -1,27 +1,23 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Entery point
- * Return: always 0
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-        int n;
+	int i;
 
-        n = 48;
-        while (n < 58)
-        {
-        putchar (n++);
-        if(n != 58)
-        {
-        putchar(',');
-        putchar(' ');
-        }
-        }
+	for (i = 0; i < 10; i++)
+	{
+	putchar(i + '0');
+	if (i != 9)
+	{
+		putchar(',');
+		putchar(' ');
+	}
+}
 
-        putchar ('\n');
+	putchar('\n');
 	return (0);
 }
