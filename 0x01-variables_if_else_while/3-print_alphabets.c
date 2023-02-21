@@ -1,30 +1,21 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
 /**
- * main - Entery point
- * 
- * Return: always 0
+ * main - Entry point
+ * Description: prints alphabet in lowercase then uppercase
+ * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	int n;
+	int ch;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-        /* your code goes there */
-        n = 97;
-        while(n){
-                putchar(n++);
-                if(n == 123)
-                        n = 65;
-                if(n == 91)
-                        break; 
-        }
-        putchar('\n');
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+	putchar(ch);
+	}
+	for (ch = 'A'; ch <= 'Z'; ch++)
+	{
+	putchar(ch);
+	}
+	putchar('\n');
 	return (0);
-}   
+}
