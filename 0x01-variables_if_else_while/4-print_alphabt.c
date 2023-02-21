@@ -13,20 +13,20 @@ int main(void)
 	int n;
 
         n = 97;
-        while(n < 123)
+        while (n < 123)
         { 
-               putchar(n++);
-               if(n == 101)
+               putchar (n++);
+               if (n == 101)
                {
                         n++;
                         continue;
                }
-               else if(n == 113)
+               else if (n == 113)
                {
                         n++;
                         continue;
                }
         }
-        putchar('\n');
+        putchar ('\n');
 	return (0);
 }
