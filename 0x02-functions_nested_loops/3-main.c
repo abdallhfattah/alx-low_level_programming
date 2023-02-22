@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * main - Throwing test cases.
  *
  * Return: Always 0.
  */
