@@ -5,14 +5,14 @@
  * Return: Always 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
-    for (int i = 0; i < 26; i++)
+    int i = 0;
+    for (; i < 26; i++)
     {
         _putchar(i + 'a');
     }
 
     _putchar('\n');
-    return (0);
 
 }
