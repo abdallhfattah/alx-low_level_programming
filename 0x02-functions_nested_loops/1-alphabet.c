@@ -7,12 +7,12 @@
 
 void print_alphabet(void)
 {
-    int i = 0;
-    for (; i < 26; i++)
-    {
-        _putchar(i + 'a');
-    }
+int i = 0;
+for (; i < 26; i++)
+{
+_putchar(i + 'a');
+}
 
-    _putchar('\n');
+_putchar('\n');
 
 }
