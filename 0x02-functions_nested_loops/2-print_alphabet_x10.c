@@ -12,13 +12,13 @@ int i, j;
 j = 10;
 while (j--)
 {
-    i = 0;
-    for (; i < 26; i++)
-    {
-    _putchar(i + 'a');
-    }
+i = 0;
+for (; i < 26; i++)
+{
+_putchar(i + 'a');
+}
 
-    _putchar('\n');
+_putchar('\n');
 }
 
 }
