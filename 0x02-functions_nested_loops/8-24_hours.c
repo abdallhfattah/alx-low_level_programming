@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
- * 
+ * jack_bauer - prints every minute of the day of Jack Bauer.
+ *
  * No Return.
  */
 
@@ -13,7 +13,7 @@ for (i = 0; i <= 2; i++)
 {
 for (j = 0; j <= 9; j++)
 {
-if((i <= 1 && j <= 9) || (i <= 2 && j <= 3))
+if ((i <= 1 && j <= 9) || (i <= 2 && j <= 3))
 {
 
 for (k = 0; k <= 5; k++)
