@@ -3,7 +3,6 @@
 /**
  * _abs - gets absolute value of any number.
  * @c: parameter passed
- *
  * Return: the postive value integer.
  */
 int _abs(int c)
