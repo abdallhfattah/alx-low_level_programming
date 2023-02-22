@@ -2,7 +2,7 @@
 
 /**
  * _islower - checking the character if its small or not
- * c is variable to check with ascii code.
+ * int c is variable to check with ascii code.
  * Return: 1 if small otherwise 0
  */
 
