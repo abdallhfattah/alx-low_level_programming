@@ -4,8 +4,8 @@
 
 /**
  * print_to_98 - printing to 98.
- * @n: variable to check the number it self. 
- * 
+ * @n: variable to check the number it self.
+ *
  */
 void print_to_98(int n)
 {
@@ -23,8 +23,9 @@ break;
 printf("%d, ", n);
 }
 }
-else{
-for (;n >= 98; n--)
+else
+{
+for (; n >= 98; n--)
 {
 if (n == 98)
 {
