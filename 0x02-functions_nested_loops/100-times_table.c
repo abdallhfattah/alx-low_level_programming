@@ -4,10 +4,11 @@
 
 /**
  * print_times_table - printing table of size n + 1
- * n : size of the matrix
+ * @n : size of the matrix
  * Return: no Return value.
  *
  */
+
 void print_times_table(int n)
 {
 	int i, j, z;
