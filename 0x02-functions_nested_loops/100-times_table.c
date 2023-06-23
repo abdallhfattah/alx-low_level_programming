@@ -4,6 +4,7 @@
 
 /**
  * print_times_table - printing table of size n + 1
+ * n : size of the matrix
  * Return: no Return value.
  *
  */
