@@ -18,24 +18,30 @@ void print_times_table(int n)
 			z = 0;
 			for (j = 0; j <= n; j++)
 			{
-				if (i != n || j != n)
-					if (z >= 10 && z < 100)
+				if (j != n)
+				{
+					if (z + i >= 10 && z + i < 100)
 					{
 						printf("%d,  ", z);
 					}
-					else if (z >= 100 && z < 1000)
+					else if (z + i >= 100 && z + i < 1000)
 					{
 						printf("%d, ", z);
 					}
-					else
+					else if (z + i < 10)
 					{
 						printf("%d,   ", z);
 					}
+					else
+					{
+						printf("%d", z);
+					}
+				}
 				else
 				{
 					printf("%d", z);
 				}
-				z = z + i;
+				z += i;
 			}
 			printf("\n");
 		}
