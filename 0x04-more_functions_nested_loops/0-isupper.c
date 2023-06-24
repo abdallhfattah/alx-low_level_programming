@@ -7,5 +7,8 @@
 
 int _isupper(char c)
 {
-	return (c >= 65 && c <= 90) ? 1 : 0;
+	if (c >= 65 && c <= 90)
+		return 1;
+	else
+		return 0;
 }
