@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _isupper - check if character Upper or not
@@ -8,12 +9,12 @@
 
 int _isupper(char c)
 {
-if (c >= 65 && c <= 90)
-{
-return 1;
-}
-else
-{
-return 0;
-}
+	if (c >= 65 && c <= 90)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
 }
