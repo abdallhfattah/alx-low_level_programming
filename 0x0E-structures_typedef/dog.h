@@ -6,6 +6,8 @@
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
+ * 
+ * Description : dog having name , age and owner
  */
 
 struct dog
