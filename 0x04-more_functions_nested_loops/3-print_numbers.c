@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_numbers : printing all number
- * return : void
+ * print_numbers - prints alphabet in lowercase then uppercase
+ * Return: 0 always (success)
  */
-
-void print_numbers()
+void print_numbers(void)
 {
-	char numbers = '0';
-	while (numbers <= '9')
+	int i;
+
+	for (i = 0; i < 10; i++)
 	{
-		_putchar(numbers);
-		numbers++;
+		printf("%d", i);
 	}
+
+	putchar('\n');
 }

@@ -1,22 +1,18 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_most_numbers : printing all number unless 2 , 4
- * return : void
+ * print_most_numbers - prints alphabet in lowercase then uppercase
+ * Return: 0 always (success)
  */
-
 void print_most_numbers(void)
 {
-	char numbers = '0';
-	while (numbers <= '9')
+	int i;
+
+	for (i = 0; i < 10; i++)
 	{
-		if (numbers == '2' || numbers == '4')
-		{
-			numbers++;
-			continue;
-		}
-		_putchar(numbers);
-		numbers++;
+		if (i != 2 && i != 4)
+			printf("%d", i);
 	}
-	_putchar('\n');
+
+	putchar('\n');
 }

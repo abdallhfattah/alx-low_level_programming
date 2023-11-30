@@ -1,17 +1,21 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * print_line : printing '_' N times if N > 0
- * return : void
+ * print_line -prints a line
+ * @n: line length
+ * Return: void
  */
-
-void print_line(int N)
+void print_line(int n)
 {
-	int i = 0;
-	for (i = 0; i < N; i++)
+	if (n > 0)
 	{
-		_putchar('_');
+		int i;
+
+		for (i = 0; i < n; i++)
+		{
+			_putchar('_');
+		}
 	}
+
 	_putchar('\n');
 }

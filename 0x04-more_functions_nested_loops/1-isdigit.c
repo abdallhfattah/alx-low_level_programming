@@ -1,11 +1,19 @@
 #include <stdio.h>
+#include "main.h"
 /**
- * _isdigit : check whether a character is number or not 
- * @c : character to check
- * return : 1 if upper , 0 if false
+ * _isdigit - checks if a character is lower case
+ * @c: the character to be checked
+ * Return: 1 if true and 0 if false
  */
 
-int _isdigit(char c)
+int _isdigit(int c)
 {
-	return (c >='0' && c <= '9') ? 1 : 0;
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

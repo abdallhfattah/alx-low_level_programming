@@ -1,26 +1,22 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
- * print_square: printing square of size * size from '#' 
- * @size : size given to print blocks
- * return : void
+ * print_square -prints das
+ * @n: number of char
  */
-
-void print_square(int size)
+void print_square(int n)
 {
-	int i = 0;
-	for (i = 0; i < size; i++)
+	int i, j;
+
+	for (i = 0; i < n; i++)
 	{
-		int j = 0;
-		for (j = 0; j < size; j++)
+		for (j = 0; j < n; j++)
 		{
 			_putchar('#');
 		}
 		_putchar('\n');
 	}
-	if (size <= 0)
-	{
+
+	if (n <= 0)
 		_putchar('\n');
-	}
 }
