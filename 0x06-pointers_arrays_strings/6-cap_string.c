@@ -1,29 +1,36 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string
- * @str: string
- * Return: array of char
+ * cap_string - The main  function
+ *
+ * @str: Function parameter of the string
+ *
+ * Return: Void.
  */
 char *cap_string(char *str)
 {
-	int i = 0;
+	int count = 0;
 
-	while (str[i])
+	while (str[count])
 	{
-		while (!(str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-
-		if (str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
-			str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '\"' ||
-			str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' ||
-			str[i - 1] == '}' || i == 0)
-		{
-			str[i] -= 32;
-		}
-
-		i++;
+		while (!(str[count] >= 'a' && str[count] <= 'z'))
+			count++;
+		if (str[count - 1] == ' ' ||
+			str[count - 1] == '\t' ||
+			str[count - 1] == '\n' ||
+			str[count - 1] == ',' ||
+			str[count - 1] == ';' ||
+			str[count - 1] == '.' ||
+			str[count - 1] == '!' ||
+			str[count - 1] == '?' ||
+			str[count - 1] == '"' ||
+			str[count - 1] == '(' ||
+			str[count - 1] == ')' ||
+			str[count - 1] == '{' ||
+			str[count - 1] == '}' ||
+			count == 0)
+			str[count] -= 32;
+		count++;
 	}
-
 	return (str);
 }
