@@ -1,7 +1,5 @@
 #include "main.h"
 
-#include <stdlib.h>
-
 /**
  * argstostr - main entry
  * @ac: int input
@@ -10,9 +8,7 @@
  */
 
 char *argstostr(int ac, char **av)
-
 {
-
 	int i, n, r = 0, l = 0;
 
 	char *str;
