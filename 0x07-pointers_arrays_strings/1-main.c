@@ -5,9 +5,9 @@
  * simple_print_buffer - prints buffer in hexa
  * @buffer: the address of memory to print
  * @size: the size of the memory to print
- *
  * Return: Nothing.
  */
+
 void simple_print_buffer(char *buffer, unsigned int size)
 {
     unsigned int i;
@@ -31,9 +31,9 @@ void simple_print_buffer(char *buffer, unsigned int size)
 
 /**
  * main - check the code
- *
  * Return: Always 0.
  */
+
 int main(void)
 {
     char buffer[98] = {0};
@@ -42,6 +42,6 @@ int main(void)
     simple_print_buffer(buffer, 98);
     _memcpy(buffer + 50, buffer2, 10);
     printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);    
+    simple_print_buffer(buffer, 98);
     return (0);
 }
