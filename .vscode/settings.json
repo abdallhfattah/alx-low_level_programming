@@ -4,6 +4,7 @@
     "*.excalidrawlib": "json",
     "main.h": "c",
     "stdio.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "function_pointers.h": "c"
   }
 }
