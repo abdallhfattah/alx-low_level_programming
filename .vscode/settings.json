@@ -6,6 +6,7 @@
     "stdio.h": "c",
     "stdlib.h": "c",
     "function_pointers.h": "c",
-    "3-calc.h": "c"
+    "3-calc.h": "c",
+    "cstdlib": "c"
   }
 }
