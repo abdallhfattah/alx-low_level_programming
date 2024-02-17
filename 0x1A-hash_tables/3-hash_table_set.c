@@ -1,38 +1,4 @@
 #include "hash_tables.h"
-/**
- * make_hash_node - create a node with key and value
- * @key: key for the node
- * @value: value fot this node
- *
- * Return: the node crreated , NULL on failure
- */
-hash_node_t *make_hash_node(const char *key, const char *value)
-{
-	hash_node_t *node;
-
-	node = malloc(sizeof(hash_node_t));
-
-	if (node == NULL)
-	{
-		return (NULL);
-	}
-
-	node->key = strdup(key);
-
-	if (node->key == NULL)
-	{
-		return (NULL);
-	}
-
-	node->value = strdup(value);
-
-	if (node->value == NULL)
-	{
-		return (NULL);
-	}
-
-	return (node);
-}
 
 /**
  * hash_table_set - the function adds element to the table
@@ -44,42 +10,43 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	unsigned long int key_idx = 0;
+	char *key_dup, *value_dup;
+	hash_node_t *new_node, *bucket;
 
-	if (!key || !ht || !value ||
-		!*key || !ht->array || !ht->size)
+	if (!key || !ht || !value || !*key)
 		return (0);
 
-	const char new_value = strdup(value);
-
-	if (!new_value)
+	value_dup = strdup(value);
+	if (!value_dup)
 		return (0);
 
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-
-	hash_node_t *bucket = ht->array[index];
+	key_idx = key_index((const unsigned char *)key, ht->size);
+	bucket = ht->array[key_idx];
 
 	while (bucket)
 	{
 		if (!strcmp(key, bucket->key))
 		{
 			free(bucket->value);
-			bucket->value = new_value;
+			bucket->value = value_dup;
 			return (1);
 		}
 		bucket = bucket->next;
 	}
 
-	hash_node_t *new_node = make_hash_node(key, value);
-
+	new_node = calloc(1, sizeof(hash_node_t));
 	if (new_node == NULL)
 	{
-		free(new_value);
+		free(value_dup);
 		return (0);
 	}
-
-	new_node->next = ht->array[index];
-
-	ht->array[index] = new_node;
-
+	key_dup = strdup(key);
+	if (!key_dup)
+		return (0);
+	new_node->key = key_dup;
+	new_node->value = value_dup;
+	new_node->next = ht->array[key_idx];
+	ht->array[key_idx] = new_node;
 	return (1);
 }

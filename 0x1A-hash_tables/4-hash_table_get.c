@@ -3,25 +3,27 @@
 /**
  * hash_table_get - function retrieves a value associated with a key
  *
- * @ht: hash table
- * @key: key to search for
+ * @ht: ht that will be looked into
+ * @key: pointer to the key we are looking for
  * Return: value of the key, NULL if key not found
  */
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	if (!ht->size || !ht->array || !key || !*key)
+	unsigned long int key_idx;
+	hash_node_t *bucket;
+
+	if (!key || !*key || !ht)
 	{
 		return (NULL);
 	}
 
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-
-	hash_node_t *bucket = ht->array[index];
+	key_idx = key_index((const unsigned char *)key, ht->size);
+	bucket = ht->array[key_idx];
 
 	while (bucket)
 	{
-		if (!strcmp(bucket->key, key))
+		if (!strcmp(key, bucket->key))
 		{
 			return (bucket->value);
 		}
